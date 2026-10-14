@@ -23,6 +23,26 @@ Felmedelande TypeError: can only concatenate str (not "int") to str
 
 svar:
 Felet uppstår eftersom input() sparar inmatningen som text. Därför kan programmet inte addera texten med heltalet 1.
+
+test:
+| Platskod | Typ | Senaste nr | Förväntat  | Faktiskt | OK? |
+|----------|-----|------------|------------|----------|-----|
+| STO      | srv | 7          | sto-srv-08 | sto-srv-08   ja
+| gbg      | SW  | 11         | gbg-sw-12  |  gbg-sw-12   ja
+| sto      | srv | 0          | sto-srv-01 | sto-srv-01   ja
+| mal      | pc  | 99         | ?mal-pc-100 | mal-pc-100  nej
+| sto      | srv | sju        | ?  error    |   error    nej  
+
+Vad händer med testet mal, pc, 99? Följer namnet fortfarande standarden? Vad borde företaget göra?
+
+Numret går över till 100. Det följer inte standarden eftersom numret ska bestå av två siffror. Företaget borde bestämma vad som ska hända när numret går över 99.
+
+Vilket fel ger det sista testet? Hur kan man förhindra sådana krascher?
+
+Man kan använda en if-sats för att kontrollera att användaren matar in rätt data.
+
+
+
 ## Problem 2
 ## Problem 3
 ## Del 4: Från källkod till körning
