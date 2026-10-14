@@ -18,6 +18,11 @@ Planera:
 6. BERÄKNA hostnamnet genom att sätta ihop platskoden, enhetstypen och nästa nummer med bindestreck.
 7. SKRIV UT nästa hostnamn.
 
+
+Felmedelande TypeError: can only concatenate str (not "int") to str
+
+svar:
+Felet uppstår eftersom input() sparar inmatningen som text. Därför kan programmet inte addera texten med heltalet 1.
 ## Problem 2
 ## Problem 3
 ## Del 4: Från källkod till körning
