@@ -92,4 +92,52 @@ I verkligheten tar överföringen oftast längre tid än programmet räknar ut. 
 1. Eftersom bredbandshastigheten inte alltid är exakt jämn och kan ändras.
 2. Eftersom andra enheter kan använda nätverket samtidigt, vilket kan göra överföringen långsammare.
 ## Problem 3
+
+• Vad är indata?
+
+Prefixlängden och antalet enheter som redan finns i nätverket, till exempel prefix 24 och 180 enheter.
+
+• Vad är utdata?
+
+Antalet adresser totalt, antalet användbara adresser och antalet lediga adresser.
+
+• Vilka regler gäller?
+
+En IPv4-adress består av 32 bitar. Prefixlängden visar hur många bitar som används för nätverksdelen. Två adresser är reserverade för nätverksadressen och broadcastadressen.
+
+• Vad kan gå fel?*
+
+Användaren kan skriva in fel data, till exempel text i stället för ett nummer eller en ogiltig prefixlängd. Antalet enheter kan också vara större än antalet användbara adresser.
+
+planering
+bryt ner problemet:
+1. Läs in prefixlängden.
+2. Läs in antalet enheter som redan finns i nätverket.
+3. Räkna ut hostbitarna: 32 − prefixlängden.
+4. Räkna ut totalt antal adresser: 2 upphöjt till antalet hostbitar.
+5. Räkna ut användbara adresser: totalt antal adresser − 2.
+6. Räkna ut lediga adresser: användbara adresser − antalet befintliga enheter.
+7. Skriv ut resultaten.
+
+pseudokod 
+start
+Läs in prefixlängd
+Läs in antal befintliga enheter
+Beräkna hostbitar = 32 − prefixlängd
+Beräkna totalt antal adresser = 2 upphöjt till hostbitar
+Beräkna användbara adresser = totalt antal adresser − 2
+Beräkna lediga adresser = användbara adresser − antal befintliga enheter
+Visa totalt antal adresser
+Visa antal användbara adresser
+Visa antal lediga adresser
+slut
+
+Testa planen för hand
+in data: Prefixlängd: 24
+in data: Befintliga enheter: 180
+beräkning: Hostbitar: 32 − 24 = 8
+beräkning: Totalt antal adresser: 2⁸ = 256
+beräkning: Användbara adresser: 256 − 2 = 254
+beräkning: Lediga adresser: 254 − 180 = 74
+visa: Svar: 256 totalt, 254 användbara och 74 lediga adresser.
 ## Del 4: Från källkod till körning
