@@ -161,9 +161,40 @@ Test 6:
 Programmet kontrollerar inte om prefixlängden är giltig. Därför kan det räkna ut ett felaktigt resultat. Programmet borde godta prefixlängder mellan /0 och /32 för IPv4.
 
 ## Del 4: Från källkod till körning
-
+Uppgift A
 Var på datorn ligger filen?
 C:\programmering\lab1\problem3.py
 
 Vad händer med filen när du stänger av datorn? Varför?
-För mig så öppnas filen när jag startar vs code. Detta är så att man kan börja jobba med vs code utan att behöva öppna det manuelt
+För mig så öppnas filen när jag startar vs code. Detta är så att man kan börja jobba med vs code utan att behöva öppna det manuelt.
+
+Uppgift B
+Skriv av sökvägen till tolken.
+
+& C:\Users\Liaml\AppData\Local\Python\pythoncore-3.14-64\python.exe
+
+Kör python --version (Mac: python3 --version) i terminalen. Vilken version kör ditt program?
+
+Python 3.14.8
+
+Förklara med egna ord: vad gör tolken med din källkod?
+
+Tolken läser källkoden och kör instruktionerna så att datorn kan utföra det som programmet ska göra.
+
+Uppgift C
+
+Hur mycket minne (RAM) använder processen? Skriv av värdet.
+
+3.6 mb
+
+Vem har startat processen och gett den minne?
+
+Operativsystemet startar processen och ger den minne så att programmet kan köras.
+
+Svara nu på programmets frågor så att det avslutas. Vad händer med processen i Aktivitetshanteraren? Vad händer med variablerna i ditt program?
+
+Processen avslutas. Variablerna visas forfarande i terminalen men dem är inte sparade i datorn.
+
+Uppgift D
+
+När jag klickar på start läser tolken min källkod och kontrollerar den. Python kan omvandla koden till bytekod som tolken sedan kör. Operativsystemet startar en process och ger den arbetsminne. Processorn utför instruktionerna när programmet körs. Programmet bearbetar informationen och skickar resultatet till skärmen. Till sist ser jag resultatet i terminalen i VS Code.
