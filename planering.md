@@ -140,4 +140,23 @@ beräkning: Totalt antal adresser: 2⁸ = 256
 beräkning: Användbara adresser: 256 − 2 = 254
 beräkning: Lediga adresser: 254 − 180 = 74
 visa: Svar: 256 totalt, 254 användbara och 74 lediga adresser.
+
+test 
+| Test | Prefix | Enheter | Förväntat totalt | Förväntat användbara | Förväntat lediga | Faktiskt            | OK? |
+| ---- | ------ | ------- | ---------------- | -------------------- | ---------------- | ------------------- | --- |
+| 1    | 24     | 180     | 256              | 254                  | 74               | 256, 254, 74        | Ja  |
+| 2    | 26     | 50      | 64               | 62                   | 12               | 64, 62, 12          | Ja  |
+| 3    | 30     | 2       | 4                | 2                    | 0                | 4, 2, 0             | Ja  |
+| 4    | 16     | 1000    | 65536            | 65534                | 64534            | 65536, 65534, 64534 | Ja  |
+| 5    | 27     | 40      | 32               | 30                   | -10              | 32, 30, -10         | Nej |
+| 6    | 33     | 0       | Ogiltigt         | Ogiltigt             | Ogiltigt         | Felaktigt resultat  | Nej |
+Test 3:
+Ett /30-nät passar mellan två routrar eftersom det ger två användbara IP-adresser, en till varje router.
+
+Test 5:
+Resultatet visar att det finns 40 enheter men bara 30 användbara IP-adresser. Driftavdelningen behöver utöka nätverket eller dela upp det i flera subnät.
+
+Test 6:
+Programmet kontrollerar inte om prefixlängden är giltig. Därför kan det räkna ut ett felaktigt resultat. Programmet borde godta prefixlängder mellan /0 och /32 för IPv4.
+
 ## Del 4: Från källkod till körning
