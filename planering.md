@@ -48,5 +48,31 @@ Man kan använda en if-sats för att kontrollera att användaren matar in rätt 
  Kommer du ihåg från genomgången hur många bitar som går på en byte?
 8 bitar.
 
+• Vad är indata?
+
+Filens storlek i GB och nätverkets bandbredd i Mbit/s, till exempel 1 GB och 100 Mbit/s.
+
+• Vad är utdata?
+
+Överföringstiden i sekunder och minuter.
+
+• Vilka regler gäller?
+
+Filstorleken kan vara ett decimaltal, till exempel 4,5 GB. Därför behöver man använda float. En byte består av 8 bitar, vilket är anledningen till att formeln multiplicerar med 8.
+
+• Vad kan gå fel?
+
+Användaren kan mata in fel data, till exempel text i stället för ett nummer eller 0 som bandbredd.
+
+Exemple
+\text{tid (s)} = \frac{\text{storlek (GB)} \times 1000 \times 8}{\text{bandbredd (Mbit/s)}}
+
+1 GB på 100 Mbit/s
+
+Sekunder: (1 × 1000 × 8) / 100 = 80 sekunder.
+Minuter: 80 / 60 = 1,33 minuter.
+
+Svar: Det tar 80 sekunder, vilket är ungefär 1,33 minuter.
+
 ## Problem 3
 ## Del 4: Från källkod till körning
