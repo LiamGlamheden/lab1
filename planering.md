@@ -74,5 +74,22 @@ Minuter: 80 / 60 = 1,33 minuter.
 
 Svar: Det tar 80 sekunder, vilket är ungefär 1,33 minuter.
 
+Test
+| Storlek (GB) | Bandbredd (Mbit/s) | Förväntat (s) | Förväntat (min) | Faktiskt | OK? |
+|---|---|---|---|---|---|
+| 1 | 100 | 80.0 | 1.33 | 80.0 s, 1.33 min | Ja |
+| 4.5 | 250 | 144.0 | 2.40 | 144.0 s, 2.40 min | Ja |
+| 50 | 1000 | 400.0 | 6.67 | 400.0 s, 6.67 min | Ja |
+| 0.5 | 1000 | 4.0 | 0.07 | 4.0 s, 0.07 min | Ja |
+| 1 | 0 | ? | ? | ZeroDivisionError | Nej |
+
+Vilket fel ger det sista testet, och varför?
+
+ZeroDivisionError: division by zero
+Eftersom man försöker dela ett tal med noll.
+
+I verkligheten tar överföringen oftast längre tid än programmet räknar ut. Ge två skäl till varför. Tänk på vad du vet om nätverk.
+1. Eftersom bredbandshastigheten inte alltid är exakt jämn och kan ändras.
+2. Eftersom andra enheter kan använda nätverket samtidigt, vilket kan göra överföringen långsammare.
 ## Problem 3
 ## Del 4: Från källkod till körning
