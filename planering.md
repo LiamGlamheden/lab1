@@ -1,9 +1,9 @@
 # Lab 1 – Planering
 ## Problem 1
 • Vad är indata?
-Data som matas in av användaren, till exempel platskod, enhetstyp och det senast använda numret.
+Data som matas in av användaren, till exempel platskod (STO), enhetstyp (srv) och det senast använda numret (7).
 • Vad är utdata?
-Data som programmet visar. Som data från variabler.
+Data som programmet visar, till exempel det nya hostnamnet (sto-srv-08).
 • Vilka regler gäller? Tänk på små bokstäver, bindestreck och två siffror.
 Hostnamnet ska bestå av en platskod, enhetstyp och ett tvåsiffrigt nummer. Allt ska skrivas med små bokstäver och delarna ska separeras med bindestreck.
 • Vad kan gå fel?
@@ -44,5 +44,9 @@ Man kan använda en if-sats för att kontrollera att användaren matar in rätt 
 
 
 ## Problem 2
+
+ Kommer du ihåg från genomgången hur många bitar som går på en byte?
+8 bitar.
+
 ## Problem 3
 ## Del 4: Från källkod till körning
