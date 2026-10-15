@@ -1,3 +1,4 @@
+OBS har fullskärm annars ser tabellen inte rätt ut.
 # Lab 1 – Planering
 ## Problem 1
 • Vad är indata?
@@ -160,3 +161,9 @@ Test 6:
 Programmet kontrollerar inte om prefixlängden är giltig. Därför kan det räkna ut ett felaktigt resultat. Programmet borde godta prefixlängder mellan /0 och /32 för IPv4.
 
 ## Del 4: Från källkod till körning
+
+Var på datorn ligger filen?
+C:\programmering\lab1\problem3.py
+
+Vad händer med filen när du stänger av datorn? Varför?
+För mig så öppnas filen när jag startar vs code. Detta är så att man kan börja jobba med vs code utan att behöva öppna det manuelt
